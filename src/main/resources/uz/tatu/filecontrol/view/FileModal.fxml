@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox alignment="CENTER" prefHeight="79.0" prefWidth="746.0" spacing="70.0">
+            <children>
+                <ComboBox fx:id="kafCombo" onHidden="#kafComboEvent" prefHeight="35.0" prefWidth="250.0" />
+                <ComboBox fx:id="fanCombo" onHidden="#fanComboEvent" prefHeight="35.0" prefWidth="250.0" />
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+            <children>
+
+            
+                                <RadioButton fx:id="lecRB" mnemonicParsing="false" onAction="#rbSwitch" selected="true" text="Lecture">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="myGroup" />
+               </toggleGroup>
+                    </RadioButton>
+                    <RadioButton fx:id="prRB" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#rbSwitch" text="Practice" toggleGroup="$myGroup">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </RadioButton>
+                    <RadioButton fx:id="labRB" mnemonicParsing="false" onAction="#rbSwitch" text="Laboratory" toggleGroup="$myGroup">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </RadioButton>
+                    <RadioButton fx:id="othRB" mnemonicParsing="false" onAction="#rbSwitch" text="Qo'shimcha" toggleGroup="$myGroup">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </RadioButton>
+            <Button fx:id="addBtn" mnemonicParsing="false" onAction="#openFiles" prefHeight="35.0" prefWidth="62.0" text="Add" />
+
+            </children>
+        </HBox>
+      <ListView fx:id="fileList" prefHeight="223.0" prefWidth="628.0" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" />
+         </VBox.margin>
+      </ListView>
+      <HBox alignment="CENTER" prefHeight="56.0" prefWidth="658.0" spacing="300.0" VBox.vgrow="NEVER">
+         <children>
+            <Button fx:id="cancleBtn" cancelButton="true" mnemonicParsing="false" onAction="#closeModal" prefHeight="35.0" prefWidth="80.0" text="Cancel" />
+            <Button fx:id="okBtn" disable="true" mnemonicParsing="false" onAction="#addAll" prefHeight="35.0" prefWidth="80.0" text="OK" />
+         </children>
+      </HBox>
+    </children>
+</VBox>

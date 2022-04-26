@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="691.0" type="BorderPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uz.tatu.filecontrol.view.MainController">
+    <center>
+        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <SplitPane dividerPositions="0.5" HBox.hgrow="ALWAYS">
+                    <SplitPane dividerPositions="0.5" maxWidth="400.0" minWidth="100.0" prefWidth="400.0">
+                        <items>
+                            <VBox alignment="TOP_CENTER">
+                                <Label text="Kafedra" />
+                                <TextField fx:id="kafFind" />
+                                <ListView fx:id="kafedraList" prefHeight="200.0" prefWidth="200.0">
+                                    <Label text="Kafedra" />
+                                </ListView>
+                            </VBox>
+                            <VBox alignment="TOP_CENTER">
+
+
+                                <Label text="Fan" />
+                                <TextField fx:id="fanFind" />
+                                <ListView fx:id="fanList" prefHeight="200.0" prefWidth="200.0">
+                                    <Label text="Fan" />
+                                </ListView>
+                            </VBox>
+                        </items>
+                    </SplitPane>
+                    <VBox alignment="TOP_CENTER">
+                        <Label text="Kontent" />
+                        <TextField fx:id="contFind" />
+                        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                            <tabs>
+
+                                <Tab fx:id="lecTab" text="Lecture">
+                                    <content>
+                                        <VBox alignment="TOP_CENTER">
+
+
+                                            <ListView fx:id="lecList" prefHeight="200.0" prefWidth="200.0">
+                                                <Label text="Lecture contents" />
+                                            </ListView>
+
+                                        </VBox>
+                                    </content>
+                                </Tab>
+                                <Tab fx:id="prTab" text="Practice">
+                                    <content>
+                                        <VBox alignment="TOP_CENTER">
+
+                                            <ListView fx:id="prList" prefHeight="200.0" prefWidth="200.0">
+                                                <Label text="Practice contents" />
+                                            </ListView>
+
+                                        </VBox>
+                                    </content>
+                                </Tab>
+                                <Tab fx:id="labTab" text="Laboratory">
+                                    <content>
+                                        <VBox alignment="TOP_CENTER">
+
+                                            <ListView fx:id="labList" prefHeight="200.0" prefWidth="200.0">
+                                                <Label text="Laboratory contents" />
+                                            </ListView>
+
+                                        </VBox>
+                                    </content>
+                                </Tab>
+
+                                <Tab fx:id="otherTab" text="Others">
+                                    <content>
+                                        <VBox alignment="TOP_CENTER">
+
+                                            <ListView fx:id="otherList" prefHeight="200.0" prefWidth="200.0">
+                                                <Label text="Other contents" />
+                                            </ListView>
+
+                                        </VBox>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </TabPane>
+
+                    </VBox>
+                </SplitPane>
+
+            </children>
+        </HBox>
+    </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#closeApp" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="addFileMenuItem" mnemonicParsing="false" onAction="#addFiles" text="Add files" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#showAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</fx:root>
