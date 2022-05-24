@@ -1,0 +1,10 @@
+#--local http.proxy http://192.168.9.100:3128
+[http]
+    proxy = http://192.168.9.100:3128
+
+    # local project uchun config file qo'shish
+# git config --local include.path ../.gitconfig
+# git config --global --unset http.proxy
+# git config --unset https.proxy
+# git config --global --get http.proxy
+# https://gist.github.com/evantoli/f8c23a37eb3558ab8765/404a5d8840a73e506ebc7a0be87e7eab70a821b5

@@ -88,7 +88,7 @@
                                                                  prefWidth="40.0" resizable="false" text="№"/>
                                                     <TableColumn fx:id="lecName" maxWidth="300.0" minWidth="100.0"
                                                                  prefWidth="100.0" text="Name"/>
-                                                    <TableColumn fx:id="lecContent" minWidth="0.0" prefWidth="20.0"
+                                                    <TableColumn fx:id="lecContent"  prefWidth="20.0"
                                                                  text="Content"/>
                                                 </columns>
                                                 <columnResizePolicy>

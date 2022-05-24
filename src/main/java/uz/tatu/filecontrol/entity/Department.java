@@ -2,13 +2,19 @@ package uz.tatu.filecontrol.entity;
 
 //import javax.persistence.Entity;
 
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.experimental.FieldDefaults;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
 
 @Entity
-public class Department {
+@Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class Department  {
 
     @Id
     Integer id;
